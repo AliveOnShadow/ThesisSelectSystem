@@ -21,7 +21,7 @@ namespace ThesisSelectSystem.Controllers
         
         public ActionResult STLogin()
         {
-            throw new Exception("123");
+            //throw new Exception("123");
             return View();
         }
 
@@ -62,6 +62,19 @@ namespace ThesisSelectSystem.Controllers
             else
                 return Content("0");
             
+        }
+
+        public ActionResult TeacherMakeLogin()
+        {
+            string Account = Request["Account"];
+            string Password = Request["Password"];
+
+            UserLogin_bll user = new UserLogin_bll();
+            bool login = user.LoginYes(Account, Password);
+            if (login)
+                return Content("1");
+            else
+                return Content("0");
         }
 
 	}

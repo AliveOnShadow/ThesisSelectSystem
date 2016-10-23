@@ -18,7 +18,7 @@ $('#login-button').click(function (event) {
 		                }
 		                else
 		                {
-		                   // alert("登陆失败!");
+		                    alert("登陆失败!");
 		                    window.location.href = "SALogin";
 		                }
 
